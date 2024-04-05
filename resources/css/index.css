@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+}
+
+main {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-section {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-members-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.team-member {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-family: 'Arial Narrow', sans-serif;
+    font-style: italic;
+    color: plum;
+}
+
+.dashed-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Adjust the width as needed */
+    border-top: 3px plum dashed;
+    top: 190px; /* Adjust the distance from the top */
+}
+
+
+.font-1 {
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px;
+}
+.ribbon {
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    color: blueviolet;
+    --r: .8em; /* control the cutout */
+    border-block: .5em solid #0000;
+    padding-inline: .5em calc(var(--r) + .25em);
+    line-height: 2.3;
+    width: fit-content;
+    z-index: 9999; /* Ensure ribbons are above other elements */
+}
+
+.ribbon-left {
+    bottom: 0; /* Position at the top */
+    left: 0; /* Position at the left corner */
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%, 100% calc(100% - .25em), calc(100% - var(--r)) 50%, 100% .25em);
+    background: radial-gradient(.2em 50% at left, blueviolet, #0000) border-box, blueviolet padding-box; /* the color */
+}
+
+.ribbon-right {
+    top: 0; /* Position at the top */
+    right: 0; /* Position at the right corner */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - .25em), var(--r) 50%, 0 .25em);
+    background: radial-gradient(.2em 50% at right, blueviolet, #0000) border-box, blueviolet padding-box; /* the color */
+    margin-top: -10px; /* Adjust this value to bring the ribbon closer to the top */
+}
+
+.ribbon-left-top {
+    left: 0;
+    top: 10;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%, 100% calc(100% - .25em), calc(100% - var(--r)) 50%, 100% .25em);
+    background: radial-gradient(.2em 50% at left, blueviolet, #0000) border-box, blueviolet padding-box; /* the color */
+}
+
+.ribbon-right-bottom {
+    right: 0; /* Position at the right corner */
+    bottom: 10; /* Position at the bottom */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - .25em), var(--r) 50%, 0 .25em);
+    background: radial-gradient(.2em 50% at right, blueviolet, #0000) border-box, blueviolet padding-box; /* the color */
+}
